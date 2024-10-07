@@ -1,24 +1,28 @@
+*{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    color:#fff;
+}
 .drum-kit {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 200px;
 }
 
 .drum-pad {
     width: 130px;
     height: 100px;
     margin: 10px;
-    /* font-size: 20px; */
     border: none;
-    /* border-radius: 50%; */
     background-color: #333;
     color: #fff;
     cursor: pointer;
 }
 
-.drum-pad:hover {
-    background-color: #444;
-}
+
 span{
     display: flex;
     flex-direction: column;
@@ -26,4 +30,14 @@ span{
     color: aqua;
     padding-top:10px;
     font-size: large;
+    background-color: #333;
+}
+
+
+img{
+    width: 50px;
+    height: 50px;
+} 
+.drum-pad:active, .drum-pad.playing {
+    transform: scale(0.9);
 }
