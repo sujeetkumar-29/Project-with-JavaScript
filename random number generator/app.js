@@ -1,43 +1,45 @@
 let pass=document.querySelector("#password");
+let withLowerCase=document.querySelector(".lowerCase").checked;
+let withUpperCase=document.querySelector(".upperCase").checked;
+let withSpecialChar=document.querySelector(".specialChar").checked;
+let withNumbers=document.querySelector(".numbers").checked;
 let genPass=document.querySelector(".genPass");
-let lowerCase=document.querySelector(".lowerCase").checked;
-let upperCase=document.querySelector(".upperCase").checked;
-let specialChar=document.querySelector(".specialChar").checked;
-let numbers=document.querySelector(".numbers").checked;
-// let length=" ";
+
 let length=document.querySelector(".length").value;
+// let length=" ";
 function generatePassword(length) {
-    const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  
+    const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowerCase="abcdefghijklmnopqrstuvwxyz";
     const numbers = "0123456789";
     const specialChar="!@#$%^&*()_+-=";
     let password = "";
-    if(!upperCase){
+    if(withUpperCase){
 
         for (let i = 0; i < length; i++) {
             password = password + upperCase.charAt(Math.floor(Math.random() * upperCase.length));
         }
     }
-    if(!lowerCase){
+    if(withLowerCase){
          for (let i = 0; i < length; i++) {
         password = password + lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
     }
     }
-   if(!specialChar){
+   if(withSpecialChar){
     for (let i = 0; i < length; i++) {
         password = password + specialChar.charAt(Math.floor(Math.random() * specialChar.length));
     }
    }
-    if(!numbers){
+    if(withNumbers){
          for (let i = 0; i < length; i++) {
         password = password + numbers.charAt(Math.floor(Math.random() * numbers.length));
     }
 
     }
    
-    console.log(length);
     return password;
 }
+// console.log(length);
 // Example usage:
 genPass.addEventListener("click",()=>{
    
