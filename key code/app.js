@@ -1,10 +1,15 @@
-
+let key=document.querySelector("#key");
+let keyCode=document.querySelector("#keyCode");
+let code=document.querySelector("#code");
 
 function keyCodeWithPress(){
-    document.addEventListener("keydown",(e)=>{
-        console.log(e.key);
-        console.log(e.code);
-        console.log(e.keyCode);
+    document.addEventListener("keydown",(event)=>{
+        key.value=event.key;
+        if(key.value==" "){
+            key.value="space";
+        }
+        keyCode.value=event.code;
+        code.value=event.keyCode;
     })
 }
 keyCodeWithPress();
