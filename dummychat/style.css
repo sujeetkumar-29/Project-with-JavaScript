@@ -1,0 +1,9 @@
+*{
+  text-align: center;
+}
+
+.btcontainer{
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: baseline;
+}
