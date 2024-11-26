@@ -1,9 +1,52 @@
-*{
+h1{
   text-align: center;
 }
 
 .btcontainer{
-    display: inline-flex;
+    display: flex;
     align-items: baseline;
     justify-content: baseline;
+}
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.chats {
+    flex: 1; /* Allow chats to take available space */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.btcontainer {
+    display: flex; /* Align input and button in a row */
+    justify-content: center; /* Center items horizontally */
+    padding: 10px; /* Add some padding */
+    background-color: #f1f1f1; /* Optional background color */
+}
+.sender{
+    /* width: 40%; */
+    margin:0 5rem 0.3rem 12rem;
+    background-color: aqua;
+
+}
+.reciever{
+    /* width: 40%; */
+    margin:0 5rem 0.3rem 10rem;
+    background-color: rgb(123, 139, 34);
+}
+
+.btcontainer {
+    display: flex; /* Align input and button in a row */
+    justify-content: center; /* Center items horizontally */
+    padding: 50px; /* Add some padding */
+    background-color: #f1f1f1; /* Optional background color */
 }
