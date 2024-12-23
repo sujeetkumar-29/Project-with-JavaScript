@@ -1,4 +1,7 @@
+const element = document.querySelector('.chats');
+element.scrollTop = element.scrollHeight;
 let sender=document.querySelector(".sender");
+let reciever=document.querySelector(".reciever");
 let input=document.querySelector("input");
 let chats=document.querySelector(".chats");
 
@@ -11,8 +14,21 @@ button.addEventListener("click",()=>{
     
     
    chats.appendChild(p);
-    input.value="";
     scrollToBottom();
+    if(input.value!=""){
+        autoMessage();
+    }
+    input.value="";
+    function autoMessage(){
+        setTimeout(()=>{
+    
+            let p=document.createElement("p");
+            p.innerHTML="thanks for message";
+            p.classList.add("reciever");
+            chats.appendChild(p);
+            scrollToBottom();
+        },1000);
+    }
 })
 
 
