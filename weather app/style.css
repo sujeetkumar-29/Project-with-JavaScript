@@ -18,7 +18,7 @@ body{
 
 }
 .weather-input{
-    width: 25%;
+    width: 40%;
     position: fixed;
     inset: 0;
     background: #4dd0df;
@@ -41,4 +41,61 @@ body{
     width: 100%;
     outline:none;
     border: none;
+}
+.input-group .converter{
+    position: absolute;
+    right: 45px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.input-group .fa-search{
+    position: absolute;
+    right:15px;
+    color: #909090;
+    cursor: pointer;
+    font-size: 22px;
+
+}
+
+.weather-output{
+    width: 60%;
+    position:fixed;
+    inset:0;
+    margin-left: 40%;
+    padding:2rem;
+    background:#f6f6f6;
+    overflow:auto;
+
+}
+
+.Highlights{
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    column-gap: 10px;
+}
+.Highlights div{
+    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #78c1f3;
+    border-radius: 20px;
+    padding: 1rem;
+
+}
+.Highlights i{
+    font-size: 45px;
+
+}
+
+.sun span{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    
 }
