@@ -43,7 +43,7 @@ body{
 .input-group input{
     background: #f8f8f8;
     text-decoration: capitalize;
-    padding: 1rem;
+    padding: 0.8rem;
     font-size: 15px;
     border-radius: 6px;
     width: 100%;
@@ -51,16 +51,15 @@ body{
     border: none;
 }
 .input-group .converter{
-    position: absolute;
-    right: 45px;
+    position:inherit;
     border: none;
     outline: none;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
 }
 .input-group .fa-search{
-    position: absolute;
-    right:15px;
+    position: relative;
+    right:25px;
     color: #909090;
     cursor: pointer;
     font-size: 22px;
@@ -80,10 +79,10 @@ body{
 
 .Highlights{
     display: grid;
-    grid-template-columns: repeat(3,350px);
+    grid-template-columns: repeat(2,350px);
     grid-auto-flow: row;
-    row-gap: 1rem;
-    column-gap: 10px;
+    row-gap: .3rem;
+    column-gap: 1rem;
 }
 .Highlights div{
     height: 200px;

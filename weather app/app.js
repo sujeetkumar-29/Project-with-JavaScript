@@ -16,21 +16,23 @@ const UVValue=document.querySelector('#UVValue');
 const PVValue=document.querySelector('#PVValue');
 const Forecast=document.querySelector('.Forecast');
 
-WEATHER_API_ENDPOINT='https://api.openweathermap.org/data/2.5/weather?appid=cbf04d46ca6b158d1bf1840f117ec87b&q=';
-WEATHER_DATA_ENDPOINT='https://api.openweathermap.org/data/2.5/onecall?appid=cbf04d46ca6b158d1bf1840f117ec87b&exclude=minutely&units=metric&';
+const WEATHER_API_ENDPOINT='https://api.openweathermap.org/data/2.5/weather?appid=cbf04d46ca6b158d1bf1840f117ec87b&q=';
+// const WEATHER_DATA_ENDPOINT='https://api.openweathermap.org/data/2.5/onecall?appid=a5bb4718b30b6f58f58697997567fffa&exclude=minutely&units=metric&'; 
 function findUserLocation(){
-    fetch(WEATHER_API_ENDPOINT+ userLocation.value).then(response=>response.json()).then(data=>{
+    fetch(WEATHER_API_ENDPOINT+ userLocation.value+'&Metric: Celsius').then(response=>response.json()).then(data=>{
         if(data.cod!="" && data.cod!=200){
             alert("Please enter a valid location");
             return;
         }
         console.log(data);
         city.innerHTML=data.name+', '+data.sys.country;
+        temperature.innerHTML=`${Math.floor(data.main.temp-273)}°C`;
         weatherIcon.style.background=`url(https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png)`;
-        fetch(WEATHER_DATA_ENDPOINT+'lat='+data.coord.lat+'&lon='+data.coord.lon).then(response=>response.json()).then(data=>{
-            console.log(data);
-            temperature.innerHTML=data.current.temp+'°C';
-        })
+        date.innerHTML=new Date().toDateString();
+
+        // fetch(WEATHER_DATA_ENDPOINT+'lat='+data.coord.lat+'&lon='+data.coord.lon).then(response=>response.json()).then(data=>{
+        //     console.log(data);
+        // })
        
     })
 }
