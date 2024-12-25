@@ -7,7 +7,35 @@
 
 body{
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgba(25, 21, 21, 0.904);
+    color: #f4f4f4;
 }
 
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: flex-start; */
+    margin-left: 100px;
+    gap: 50px;
+    background-color: black;
+    color:#f4f4f4;
+    margin-right: 100px;
+}
+#avatar{
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+    border-radius: 50%;
 
+}
+.profile{
+    display: flex;
+    gap: 20px;
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}

@@ -9,7 +9,39 @@
 <body>
     <h2>Github Profile Viewer</h2>
     <input type="text" id="username" placeholder="Enter Github Username">
-    <button  onclick="findUser()">Fetch</button>
+    <button onclick="findUser()">Fetch</button>
+
+    <div class="container">
+        <div class="profileImg">
+            <img src="profileImage.jpeg" alt="" id="avatar">
+        </div>
+        <div class="profileInfo">
+            <div class="profile">
+                <h2 id="name" >name</h2>
+                <p  ><a id="profileLink">Github Profile</a></p>
+            </div>
+            <h4 id="bio">bio</h4>
+         <div class="list">
+            <div class="followers">
+                <p id="followers"></p>Followers
+            </div>
+            <div class="following">
+                <p id="following"></p>Following
+            </div>
+            <div class="repos">
+                <p id="repos"></p>Repository
+            </div>
+         </div>
+         <div class="dates">
+             <div class="loginDate">Login Date:
+            <span id="loginDate"></span>
+         </div>
+         <div class="lastOnline">Last Online:
+            <span id="lastOnline"></span>
+         </div>
+         </div>
+    </div>
+
 
 
     <script src="app.js"></script>
