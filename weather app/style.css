@@ -65,6 +65,10 @@ body{
     font-size: 22px;
 
 }
+.temperature{
+    font-size: 5rem;
+    margin-left: 20px;
+}
 
 .weather-output{
     width: 60%;

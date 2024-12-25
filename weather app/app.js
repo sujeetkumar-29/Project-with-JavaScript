@@ -27,8 +27,19 @@ function findUserLocation(){
         console.log(data);
         city.innerHTML=data.name+', '+data.sys.country;
         temperature.innerHTML=`${Math.floor(data.main.temp-273)}°C`;
+        feelsLike.innerHTML=`Feels like ${Math.floor(data.main.feels_like-273)}°C`;
+        description.innerHTML=data.weather[0].description;
         weatherIcon.style.background=`url(https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png)`;
         date.innerHTML=new Date().toDateString();
+
+        HValue.innerHTML=data.main.humidity+'%';
+        WValue.innerHTML=data.wind.speed+'m/s';
+        SRValue.innerHTML=new Date(data.sys.sunrise*1000).toLocaleTimeString();
+        SSValue.innerHTML=new Date(data.sys.sunset*1000).toLocaleTimeString();
+        CValue.innerHTML=data.clouds.all+'%';
+        VValue.innerHTML=`${data.visibility/1000}km`;
+        PValue.innerHTML=data.main.pressure+'hPa';
+        
 
         // fetch(WEATHER_DATA_ENDPOINT+'lat='+data.coord.lat+'&lon='+data.coord.lon).then(response=>response.json()).then(data=>{
         //     console.log(data);
