@@ -18,7 +18,7 @@ body{
 
 }
 .weather-input{
-    width: 40%;
+    width: 30%;
     position: fixed;
     inset: 0;
     background: #4dd0df;
@@ -71,12 +71,12 @@ body{
 }
 
 .weather-output{
-    width: 60%;
+    width: 70%;
     position:fixed;
     inset:0;
     margin-left: 40%;
     padding:2rem;
-    background:#f6f6f6;
+    /* background:#f6f6f6; */
     overflow:auto;
 
 }
@@ -109,4 +109,73 @@ body{
     display: flex;
     gap: 10px;
 
+}
+
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        flex-direction: column;   /*Stack elements vertically*/
+        align-items: center; /* Center items */
+    }
+
+    .weather-input {
+        width: 100%; /* Make input take most of the width */
+        height: 400px;
+        padding: 1rem; /* Add padding */
+        margin: 1rem 0; /* Add margin for spacing */
+    }
+
+    .input-group {
+        width: 100%; /* Full width for input group */
+        margin: 0; /* Remove margin */
+    }
+
+    .input-group input {
+        width: 100%; /* Full width for input */
+        padding: 0.5rem; /* Adjust padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .weatherIcon {
+        height: 30%; /* Adjust height for mobile */
+        margin: 1rem auto; /* Center icon */
+    }
+
+    .temperature {
+        font-size: 3rem; /* Smaller font size for temperature */
+        margin-left: 0; /* Remove left margin */
+    }
+
+   .weather-output {
+        margin-top:400px;
+        width: 100%; /* Full width for output */
+        margin-left: 0; /* Remove left margin */
+        padding: 1rem; /* Add padding */
+    }
+
+    .Highlights {
+        grid-template-columns: repeat(1, 1fr); /* Change to 1 column */
+        grid-auto-flow: row; /* Stack items vertically */
+        row-gap: 1rem; /* Add gap between rows */
+        column-gap: 0; /* Remove gap between columns */
+    }
+
+    .Highlights div {
+        height: 100px; /* Adjust height */
+        padding: 0.5rem; /* Adjust padding */
+    }
+
+    .Highlights i {
+        font-size: 30px; /* Adjust icon size */
+    }
+
+    .sun span {
+        gap: 5px; /* Adjust gap */
+    }
 }
