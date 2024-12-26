@@ -10,6 +10,30 @@ body{
     background-color: rgba(25, 21, 21, 0.904);
     color: #f4f4f4;
 }
+input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    background-color: #f4f4f4;
+}
+button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f4f4f4;
+    color: black;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #f4f4f4;
+    border: 0.5px white solid;
+    border-radius: 5px;
+}
 
 .container{
     display: flex;
@@ -38,4 +62,38 @@ body{
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Adjust font size for better readability */
+        padding: 10px; /* Add padding for mobile view */
+    }
+
+    .container {
+        margin-left: 10px; /* Reduce margin for smaller screens */
+        margin-right: 10px; /* Reduce margin for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    input {
+        width: 100%; /* Make input fields full width */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width */
+    }
+
+    #avatar {
+        width: 200px; /* Reduce avatar size */
+        height: 200px; /* Reduce avatar size */
+    }
+
+    .profile {
+        flex-direction: column; /* Stack profile items vertically */
+    }
+
+    .list {
+        flex-direction: column; /* Stack list items vertically */
+    }
 }
