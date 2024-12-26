@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calender</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <h1>Calender</h1>
+    <div class="calendar">
+        <div class="header">
+            <button id="prev">&lt;</button>
+            <h2 id="monthYear"></h2>
+            <button id="next">&gt;</button>
+        </div>
+        <div class="todayDate">
+            <h2 id="todayDate">Today</h2>
+        </div>
+        <div class="days">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+        </div>
+        <div id="dates" class="dates"></div>
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>

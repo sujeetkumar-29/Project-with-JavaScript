@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    text-align: center;
+    
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    row-gap: 50px;
+    /* height: 100vh; */
+    background-color: rgb(33, 30, 33);
+    color: white;
+    
+}
+
+.calendar {
+    background: rgb(0, 0, 0);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 320px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.header button{
+    background-color:saddlebrown;
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+#monthYear {
+    margin: 0;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 10px;
+    /* column-gap: 10px; */
+}
+
+.day {
+    font-weight: bold;
+    text-align: center;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 10px;
+    column-gap: 13px;
+}
+
+.date {
+    height: 50px;
+    text-align: center;
+    line-height: 40px;
+    /* border: 1px solid #e0e0e0; */
+    box-sizing: border-box;
+    /* /* row-gap: 0px; */
+    column-gap: 20px; 
+}
+
+.currentDate{
+    background-color: white;
+    color: black;
+}
+
+#todayDate{
+    font-weight: bold;
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    
+}
