@@ -1,0 +1,26 @@
+*{
+    margin-top: 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+body{
+    background-color: #1f1f1f;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+#joke{
+    width: 50%;
+    background-color: #2b2929ec;
+    margin: 0 auto;
+    padding: 20px;
+}
+button{
+    padding: 10px 20px;
+    background-color: #e6d8d8ec;
+    color: rgb(5, 2, 2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
