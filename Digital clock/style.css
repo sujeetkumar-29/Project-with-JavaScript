@@ -1,21 +1,40 @@
 body{
     font-family: 'Lato', sans-serif;
-    background-color: #f5f5f5;
-    margin-top: 150px;
+    background-color: #272424;
+    color: #fff;
+    margin-top: 80px;
     display: grid;
-    row-gap:100px;
+    row-gap:20px;
     justify-content: center;
     align-items: center;
     
 }
-.clock{
+.clock {
     width: 300px;
-    height: 300px;
+    height: 200px;
     font-size: 50px;
-    display:flex;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    text-align: center;
 }
-#session{
+#session {
     font-size: 20px !important;
     margin-top: 40px;
 }
+
+.switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+  
