@@ -1,0 +1,21 @@
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
+    margin-top: 150px;
+    display: grid;
+    row-gap:100px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    font-size: 50px;
+    display:flex;
+    
+}
+#session{
+    font-size: 20px !important;
+    margin-top: 40px;
+}
