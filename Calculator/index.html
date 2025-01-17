@@ -8,13 +8,18 @@
 </head>
 <body>
     <div class="calculator">
-        <input type="text" class="calculator-screen" value="" disabled />
+        <!-- Current value display -->
+        <input type="text" class="calculator-screen" value="0" disabled />
+
+        <!-- Calculator keys -->
         <div class="calculator-keys">
+            <!-- Operators -->
             <button type="button" class="operator" value="+">+</button>
             <button type="button" class="operator" value="-">-</button>
             <button type="button" class="operator" value="*">&times;</button>
             <button type="button" class="operator" value="/">&divide;</button>
 
+            <!-- Digits -->
             <button type="button" value="7">7</button>
             <button type="button" value="8">8</button>
             <button type="button" value="9">9</button>
@@ -28,9 +33,12 @@
             <button type="button" value="3">3</button>
 
             <button type="button" value="0">0</button>
+
+            <!-- Decimal and clear -->
             <button type="button" class="decimal" value=".">.</button>
             <button type="button" class="all-clear" value="all-clear">AC</button>
 
+            <!-- Equal sign -->
             <button type="button" class="equal-sign operator" value="=">=</button>
         </div>
     </div>

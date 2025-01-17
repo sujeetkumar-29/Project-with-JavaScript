@@ -1,14 +1,15 @@
 const calculator = {
-    displayValue: '0',
+    displayValue: '0', // Holds the current display value
     firstOperand: null,
     waitingForSecondOperand: false,
     operator: null,
 };
 
+// Handles digit input
 function inputDigit(digit) {
     const { displayValue, waitingForSecondOperand } = calculator;
 
-    if (waitingForSecondOperand === true) {
+    if (waitingForSecondOperand) {
         calculator.displayValue = digit;
         calculator.waitingForSecondOperand = false;
     } else {
@@ -16,19 +17,21 @@ function inputDigit(digit) {
     }
 }
 
+// Handles decimal point input
 function inputDecimal(dot) {
-    if (calculator.waitingForSecondOperand === true) return;
+    if (calculator.waitingForSecondOperand) return;
 
     if (!calculator.displayValue.includes(dot)) {
         calculator.displayValue += dot;
     }
 }
 
+// Handles operator input
 function handleOperator(nextOperator) {
     const { firstOperand, displayValue, operator } = calculator;
     const inputValue = parseFloat(displayValue);
 
-    if (operator && calculator.waitingForSecondOperand)  {
+    if (operator && calculator.waitingForSecondOperand) {
         calculator.operator = nextOperator;
         return;
     }
@@ -37,23 +40,25 @@ function handleOperator(nextOperator) {
         calculator.firstOperand = inputValue;
     } else if (operator) {
         const result = performCalculation[operator](firstOperand, inputValue);
-
-        calculator.displayValue = String(result);
+        calculator.displayValue = `${result}`;
         calculator.firstOperand = result;
     }
 
     calculator.waitingForSecondOperand = true;
+    calculator.displayValue += nextOperator; // Append operator to the display
     calculator.operator = nextOperator;
 }
 
+// Defines the calculation logic
 const performCalculation = {
     '/': (firstOperand, secondOperand) => firstOperand / secondOperand,
     '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
     '+': (firstOperand, secondOperand) => firstOperand + secondOperand,
     '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
-    '=': (firstOperand, secondOperand) => secondOperand
+    '=': (firstOperand, secondOperand) => secondOperand,
 };
 
+// Resets the calculator to its initial state
 function resetCalculator() {
     calculator.displayValue = '0';
     calculator.firstOperand = null;
@@ -61,38 +66,30 @@ function resetCalculator() {
     calculator.operator = null;
 }
 
+// Updates the display with the current value
 function updateDisplay() {
     const display = document.querySelector('.calculator-screen');
     display.value = calculator.displayValue;
 }
 
+// Initialize display
 updateDisplay();
 
+// Adds event listener for button clicks
 const keys = document.querySelector('.calculator-keys');
 keys.addEventListener('click', (event) => {
     const { target } = event;
-    if (!target.matches('button')) {
-        return;
-    }
+    if (!target.matches('button')) return;
 
     if (target.classList.contains('operator')) {
         handleOperator(target.value);
-        updateDisplay();
-        return;
-    }
-
-    if (target.classList.contains('decimal')) {
+    } else if (target.classList.contains('decimal')) {
         inputDecimal(target.value);
-        updateDisplay();
-        return;
-    }
-
-    if (target.classList.contains('all-clear')) {
+    } else if (target.classList.contains('all-clear')) {
         resetCalculator();
-        updateDisplay();
-        return;
+    } else {
+        inputDigit(target.value);
     }
 
-    inputDigit(target.value);
     updateDisplay();
 });
