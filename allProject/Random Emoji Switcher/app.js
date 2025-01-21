@@ -12,4 +12,4 @@ function emojiFetcher() {
 }
 window.onload = emojiFetcher;
 emoji.addEventListener('click', emojiFetcher);
-emoji.addEventListener('mouseover', emojiFetcher);
+// emoji.addEventListener('mouseover', emojiFetcher);
