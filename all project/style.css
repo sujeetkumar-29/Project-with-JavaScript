@@ -4,7 +4,7 @@
     box-sizing: border-box;
     background-color: rgb(19, 19, 19);
     color: white;
-
+    font-family: 'Poppins', sans-serif;
 }
 .topbar{
     text-align: center;
