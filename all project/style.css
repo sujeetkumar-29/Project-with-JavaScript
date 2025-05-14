@@ -7,6 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .topbar{
+  margin-top: 1.5rem;
     text-align: center;
     font-size: 40px;
 }
@@ -66,7 +67,9 @@
 
 
 
-  /* ...existing code... */
+  .projectBox a:last-child {
+    margin-right: 0; /* Remove margin for the last button */
+  }
 
 @media (max-width: 768px) {
   .container {
@@ -80,5 +83,3 @@
  
 
 }
-
-/* ...existing code... */
